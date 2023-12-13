@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter
+# nuxtjs构建的一个仿网易云音乐网站（spotify风格）
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
@@ -22,7 +22,7 @@ bun install
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Start the development server on `http://localhost:3300`:
 
 ```bash
 # npm
