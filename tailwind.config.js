@@ -14,6 +14,7 @@ module.exports = {
         bgBase: "#121212",
         textBase: "#b3b3b3",
         accent: "#1ed760",
+        subtitle: "#878787"
       },
     },
   },

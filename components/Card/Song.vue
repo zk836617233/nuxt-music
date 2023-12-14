@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="card-img group">
-      <div class="play-count">
+      <div class="play-count" v-if="playCount">
         <Icon name="material-symbols:play-arrow-outline" size="24" />
         {{ _playCount }}
       </div>
-      <NuxtImg class="rounded-md" :src="picUrl" :alt="name" />
+      <NuxtImg class="rounded-md w-full" :src="picUrl" :alt="name" />
       <div class="play-icon">
         <Icon
           name="material-symbols:play-arrow-rounded"
@@ -28,17 +28,16 @@ const props = defineProps({
 });
 
 const _playCount = computed(() => {
-    if (props.playCount < 10000) {
-        return `${props.playCount}`;
-      } else if (props.playCount < 100000000) {
-        const newValue = Math.floor(props.playCount / 10000);
-        return `${newValue} 万`;
-      } else {
-        const newValue = Math.floor(props.playCount / 100000000);
-        return `${newValue} 亿`;
-      }
-})
-
+  if (props.playCount < 10000) {
+    return `${props.playCount}`;
+  } else if (props.playCount < 100000000) {
+    const newValue = Math.floor(props.playCount / 10000);
+    return `${newValue} 万`;
+  } else {
+    const newValue = Math.floor(props.playCount / 100000000);
+    return `${newValue} 亿`;
+  }
+});
 </script>
 
 <style scoped>
@@ -54,7 +53,7 @@ const _playCount = computed(() => {
   @apply group-hover:opacity-100  opacity-0 transition duration-300 absolute bg-accent w-[50px] h-[50px] right-3 bottom-3 flex justify-center items-center rounded-full;
 }
 
-.card-text{
-    @apply py-2 text-base font-light cursor-pointer
+.card-text {
+  @apply py-2 text-base font-light cursor-pointer;
 }
 </style>

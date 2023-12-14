@@ -31,6 +31,6 @@
 }
 .m-main {
   grid-area: main;
-  @apply h-screen overflow-y-scroll p-2;
+  @apply h-screen overflow-y-scroll p-2 pb-[64px];
 }
 </style>
