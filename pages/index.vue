@@ -49,7 +49,6 @@ const { data: personalized } = await useFetch(
     pick: ["result"],
   }
 );
-console.log(personalized);
 </script>
 
 <style scoped>

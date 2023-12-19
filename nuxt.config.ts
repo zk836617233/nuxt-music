@@ -8,6 +8,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  runtimeConfig: {
+    public: {
+      apiBase: process.env.NUXT_PUBLIC_API_BASE,
+    },
+  },
+  routeRules: {
+    "/mv/**": { ssr: false },
+  },
   modules: ["nuxt-icon", "@nuxt/image", "nuxt-swiper", "vuetify-nuxt-module"],
   vuetify: {
     vuetifyOptions: {
@@ -21,6 +29,9 @@ export default defineNuxtConfig({
         "VBanner",
         "VBannerText",
       ],
+      theme: {
+        defaultTheme: "dark",
+      },
     },
   },
 });

@@ -20,9 +20,25 @@
       </div>
       <!-- btn组 -->
       <div class="flex gap-4">
-        <VBtn color="#1ed760" size="small" prepend-icon="mdi-play"> 播放全部 </VBtn>
-        <VBtn color="#b3b3b3" size="small" variant="outlined" prepend-icon="mdi-tab-plus"> 收藏{{ subscribedCount }} </VBtn>
-        <VBtn color="#b3b3b3" size="small" variant="outlined" prepend-icon="mdi-share-all-outline"> 分享{{ shareCount }} </VBtn>
+        <VBtn color="#1ed760" size="small" prepend-icon="mdi-play">
+          播放全部
+        </VBtn>
+        <VBtn
+          color="#b3b3b3"
+          size="small"
+          variant="outlined"
+          prepend-icon="mdi-tab-plus"
+        >
+          收藏{{ subscribedCount }}
+        </VBtn>
+        <VBtn
+          color="#b3b3b3"
+          size="small"
+          variant="outlined"
+          prepend-icon="mdi-share-all-outline"
+        >
+          分享{{ shareCount }}
+        </VBtn>
       </div>
       <div class="flex gap-4 text-sm">
         <div>
@@ -41,18 +57,19 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  description: String,
-  name: String,
-  playCount: Number,
-  trackCount: Number,
-  updateTime: Number,
-  coverImgUrl: String,
-  avatarUrl: String,
-  nickname: String,
-  shareCount:Number,
-  subscribedCount:Number
-});
+interface PropsType {
+  description: string;
+  name: string;
+  playCount: number;
+  trackCount: number;
+  updateTime: number;
+  coverImgUrl: string;
+  avatarUrl: string;
+  nickname: string;
+  shareCount: number;
+  subscribedCount: number;
+}
+defineProps<PropsType>();
 </script>
 
 <style scoped>

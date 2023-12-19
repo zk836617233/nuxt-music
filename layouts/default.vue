@@ -20,6 +20,10 @@
   grid-template-columns: auto 1fr;
   background: #000;
   grid-template-rows: 1fr auto;
+  
+}
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
 }
 
 .m-side {
